@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: background-color .5s ease;
 }
 
 svg {
@@ -17,9 +18,14 @@ svg {
     --transition-param: all .5s ease;
     font-family: 'Jost', sans-serif;
     font-size: 10px;
+    font-weight: 500;
 }
 
-html {
+.greybox {
+    width: 96vw;
+    border-radius: 20px;
+    margin: 2vw;
+    padding: 1vw;
     background-color: var(--color-background-main);
 }
 
@@ -100,6 +106,7 @@ a.button:active svg path {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 10px 0;
 }
 
 .reaction-holder .reaction {
@@ -201,20 +208,23 @@ a.button:active svg path {
     margin: 10px;
 }
 
-.search-bar:focus-within {
-    outline: 2px solid #FF868E;
-}
-
 .search-bar:hover {
     outline: 2px solid #FBE0DC;
 }
 
+.search-bar:focus-within {
+    outline: 2px solid #FF868E;
+}
+
 .search-bar input[type="search"] {
     margin-left: 10px;
+    margin-right: 20px;
     font-size: 2em;
     font-family: 'Jost';
     line-height: 1.5em;
     border: 0;
+    
+    width: 100%;
 }
 
 .search-bar input[type="search"]:focus, .search-bar input[type="search"]:focus-within {
@@ -236,3 +246,66 @@ a.button:active svg path {
     border-radius: 10px;
     cursor: pointer;
 }
+
+.order-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: min-content;
+    align-items: flex-end;
+}
+
+.order-select .reset {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.order-select .select-holder label {
+    font: 'Jost' 1em;
+    line-height: 1.8em;
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: #8C8C8C;
+}
+
+.order-select select {
+    font-size: 1.6rem;
+    border: 0;
+    border-radius: 10px;
+    background-color: var(--color-base);
+    padding: 0 50px 0 10px;
+    line-height: 1.5em;
+    height: 4rem;
+    width: 290px;
+    appearance: none;
+    color: #1D1D1D;
+}
+
+
+
+.order-select select:hover {
+    outline: 2px solid #FBE0DC;
+}
+
+
+
+.order-select .myarrow {
+    width: 32px;
+    height: 40px;
+    position: absolute;
+    display: inline-block;
+    top: 1px;
+    right: 3px;
+    background: url("img/down-arrow.svg") center no-repeat;
+    pointer-events: none;
+    transition: transform .5s ease-in-out;
+}
+
+.order-select .custom-select:focus-within .myarrow {
+    transform: rotate(180deg);
+}
+
+.order-select .custom-select {
+    position: relative;
+    display: inline-block;
+}  
