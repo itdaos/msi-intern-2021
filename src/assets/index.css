@@ -95,7 +95,6 @@ a.button:active {
 
 a.button:active svg path {
   fill: var(--color-base);
-  fill-rule: nonzero;
 }
 
 .reaction-holder {
@@ -247,7 +246,7 @@ a.button:active svg path {
   flex-shrink: 0;
 }
 
-.order-select {
+.selector {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -255,12 +254,12 @@ a.button:active svg path {
   align-items: flex-end;
 }
 
-.order-select .reset {
+.selector .reset {
   margin: 0;
   margin-left: 10px;
 }
 
-.order-select .select-holder label {
+.selector .select-holder label {
   font: "Jost" 1em;
   line-height: 1.8em;
   padding-left: 10px;
@@ -268,7 +267,7 @@ a.button:active svg path {
   color: #8c8c8c;
 }
 
-.order-select select {
+.selector select {
   font-size: 1.6rem;
   border: 0;
   border-radius: 10px;
@@ -281,11 +280,11 @@ a.button:active svg path {
   color: #1d1d1d;
 }
 
-.order-select select:hover {
+.selector select:hover {
   outline: 2px solid #fbe0dc;
 }
 
-.order-select .myarrow {
+.selector .myarrow {
   width: 32px;
   height: 40px;
   position: absolute;
@@ -297,11 +296,11 @@ a.button:active svg path {
   transition: transform 0.5s ease-in-out;
 }
 
-.order-select .custom-select:focus-within .myarrow {
+.selector .custom-select:focus-within .myarrow {
   transform: rotate(180deg);
 }
 
-.order-select .custom-select {
+.selector .custom-select {
   position: relative;
   display: inline-block;
 }
@@ -314,7 +313,7 @@ a.button:active svg path {
     height: min-content;
     overflow: hidden;
     background-color: rgba(255, 134, 142);
-    margin: 10px
+    margin: 10px;
 }
 
 .img-holder img {
@@ -339,4 +338,98 @@ a.button:active svg path {
 .img-holder:hover img {
     opacity: 0.6;
     filter: alpha(opacity=60);
+}
+
+.prime {
+  margin: 20px;
+}
+
+.prime .selector select {
+  background-color: #F8F8F7;
+  color: #8C8C8C;
+}
+
+.prime .icon-holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.prime .icon {
+  background-color: #F8F8F7;
+  flex-shrink: 0;
+}
+
+.prime .icon svg {
+  flex-shrink: 0;
+}
+
+.prime .icon:hover {
+  background-color: #F8F8F7;
+  border: 2px solid #FBE0DC;
+}
+
+.prime .icon:hover svg path {
+  fill: #ff868e;
+}
+
+.prime .icon:active {
+  border: 3px solid #FBE0DC;
+}
+
+.prime .upload {
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  display: flex;
+  flex-direction: row;
+  width: min-content;
+  color: var(--color-main);
+  text-transform: uppercase;
+  background-color: var(--color-secondary);
+}
+
+.prime .upload:hover {
+  color: var(--color-base) ;
+  background-color: var(--color-main);
+  border: 0;
+}
+
+.prime .upload:hover svg path {
+  fill: var(--color-base)
+}
+
+.prime .upload svg {
+  margin-right: 10px;
+}
+
+.prime .upload-submit {
+  background-color: var(--color-main);
+  color: var(--color-base);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.prime .upload-submit:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-main);
+  border: 0;
+}
+
+.prime .upload-submit:active {
+  border: 0;
+}
+
+.prime .upload-submit:active::before {
+  width: 10px;
+  height: 10px;
+}
+
+.prime .upload-submit svg {
+  margin-right: 10px;
 }
