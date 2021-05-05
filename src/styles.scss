@@ -9,9 +9,12 @@ svg {
 transition: fill 0.5s ease;
 }
 
+.noHover {
+  pointer-events: none;
+}
 
 :root {
---color-background-main: #ddd;
+--color-background-main: #F8F8F7;
 --color-main: #ff868e;
 --color-secondary: #fbe0dc;
 --color-base: #fff;
@@ -21,7 +24,7 @@ font-size: 10px;
 font-weight: 500;
 }
 
-app-landing {
+app-landing, app-voting, app-breeds, app-gallery {
   width: 100%;
   position: relative;
 }
@@ -62,8 +65,7 @@ app-landing {
   }
   
 
-  
-  .route-selector:active a {
+  .route-selector:active a, .route-selector.activated a {
     background-color: var(--color-main);
     color: var(--color-base);
   }
@@ -77,38 +79,45 @@ app-landing {
     background-color: var(--color-secondary);
   }
   
-  a.button:active {
+  a.button:active, a.button.activated {
     background-color: var(--color-main);
     color: var(--color-base);
   }
   
-  a.button:active svg path {
+  a.button:active svg path, a.button.activated svg path {
     fill: var(--color-base);
   }
   
   .reaction-holder {
-    width: 240px;
+    width: min-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0;
   }
   
   .reaction-holder .reaction {
     padding: 15px;
     border-radius: 20px;
+
+  }
+
+  .reaction-holder .reaction:not(:last-child) {
+    margin-right: 10px;
   }
   
   .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
     padding: 10px;
     border-radius: 10px;
     margin: 10px; /* delete */
+  }
+
+  .icon.fixed {
+    width: 40px;
+    height: 40px;
   }
   
   .reaction-panel {
@@ -118,7 +127,6 @@ app-landing {
     width: max-content;
     display: flex;
     flex-direction: row;
-    margin: 5px;
   }
   
   .reaction-panel .icon {
@@ -186,12 +194,12 @@ app-landing {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 395px;
+    width: 100%;
     height: 60px;
     padding: 10px;
     background-color: var(--color-base);
     border-radius: 20px;
-    margin: 10px;
+    margin-right: 10px;
   }
   
   .search-bar:hover {
@@ -328,10 +336,7 @@ app-landing {
       opacity: 0.6;
       filter: alpha(opacity=60);
   }
-  
-  .prime {
-    margin: 20px;
-  }
+
   
   .prime .selector select {
     background-color: #F8F8F7;
@@ -361,7 +366,7 @@ app-landing {
     fill: #ff868e;
   }
   
-  .prime .icon:active {
+  .prime .icon:active, .prime .icon.activated {
     border: 3px solid #FBE0DC;
   }
   
@@ -391,7 +396,7 @@ app-landing {
     margin-right: 10px;
   }
   
-  .prime .upload-submit {
+  .prime .text.button {
     background-color: var(--color-main);
     color: var(--color-base);
     text-decoration: none;
@@ -404,21 +409,16 @@ app-landing {
     overflow-wrap: break-word;
   }
   
-  .prime .upload-submit:hover {
+  .prime .text.button:hover {
     background-color: var(--color-secondary);
     color: var(--color-main);
     border: 0;
   }
   
-  .prime .upload-submit:active {
+  .prime .text.button:active, .prime .text.button.activated {
     border: 0;
   }
   
-  .prime .upload-submit:active::before {
-    width: 10px;
-    height: 10px;
-  }
-  
-  .prime .upload-submit svg {
+  .prime .text.button svg {
     margin-right: 10px;
   }

@@ -2,7 +2,7 @@
   <div class="left-panel">
     <div class="container">
       <header>
-        <div class="logo">
+        <div class="logo" routerLink="">
           <img src="assets/img/logo.svg" alt="PetPaw logo">
         </div>
       </header>
@@ -11,20 +11,20 @@
         <p>Welcome to MSI 2021 Front-end test</p>
         <nav>
           <p>Lets start using The Dogs API</p>
-          <div class="row">
-            <div class="route-selector" id="voting">
+          <div class="row"> 
+            <div class="route-selector" id="voting" routerLink="voting" routerLinkActive="activated">
               <div class="img-container">
                 <img src="/assets/img/vote-table.png" alt="voting table" />
               </div>
               <a href="#">Voting</a>
             </div>
-            <div class="route-selector" id="breeds">
+            <div class="route-selector" id="breeds" routerLink="breeds" routerLinkActive="activated">
               <div class="img-container">
                 <img src="/assets/img/pet-breeds.png" alt="breeds" />
               </div>
               <a href="#">Breeds</a>
             </div>
-            <div class="route-selector" id="gallery">
+            <div class="route-selector" id="gallery" routerLink="gallery" routerLinkActive="activated">
               <div class="img-container">
                 <img src="/assets/img/images-search.png" alt="images search" />
               </div>

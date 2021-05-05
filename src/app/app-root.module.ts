@@ -5,18 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppRootComponent } from './app-root.component';
 import { LandingComponent } from './landing/landing.component';
 import { AppComponent } from './app/app.component';
+import { VotingComponent } from './voting/voting.component';
+import { BreedsComponent } from './breeds/breeds.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { httpInterceptorsProviders } from './httpInterceptorsProviders';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    AppRootComponent
+    AppRootComponent,
+    VotingComponent,
+    BreedsComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+  
   ],
-  providers: [],
+  providers: [httpInterceptorsProviders],
   bootstrap: [AppRootComponent]
 })
 export class AppRootModule { }

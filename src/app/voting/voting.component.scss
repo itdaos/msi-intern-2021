@@ -1,0 +1,127 @@
+.inner-container {
+    width: 100%;
+    padding: 30px;
+    height: 100%;
+}
+
+.row.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.prime {
+    min-height: calc(100vh - 135px);
+    width: 100%;
+    background-color: var(--color-base);
+    border-radius: 20px;
+    padding: 20px;
+
+    .row.header {
+        justify-content: flex-start;
+    }
+
+    .icon.button {
+        background-color: var(--color-secondary);
+        color: var(--color-main);
+        border: 0;
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    .icon.button svg path {
+        fill: var(--color-main);
+    }
+
+    .icon.button:hover {
+        background-color: var(--color-main);
+        color: var(--color-base);
+        border: 0;
+    }
+
+    .icon.button:hover svg path {
+        fill: var(--color-base);
+    }
+
+    .icon.button.activated {
+        background-color: var(--color-main);
+        color: var(--color-base);
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 10px;
+        font-size: 2rem;
+        line-height: 1.5;
+        padding: 5px 30px;
+    }
+
+    .view-doggo {
+        max-width: 100%;
+        position: relative;
+        transition: all .5s ease;
+
+        img {
+            width: 100%;
+            height: auto;
+            min-height: 40%;
+            background-color: var(--color-background-main);
+            border-radius: 20px;
+            transition: all .5s ease;
+        }
+
+        .reaction-panel {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, +50%);
+        
+        }
+    }
+
+    .message-log {
+        margin-top: 50px;
+        max-height: 270px;
+        overflow-y: scroll;
+
+        .message {
+            width: 100%;
+            border-radius: 20px;
+            background-color: var(--color-background-main);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: #8C8C8C;
+            padding: 18px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+
+            .time {
+                margin-right: 20px;
+                border-radius: 10px;
+                padding: 3px 10px;
+                background-color: var(--color-base);
+                color: #1D1D1D;
+                font-weight: 400;
+            }
+
+            .id {
+                font-weight: 500;
+                color: #1D1D1D;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+
+}
