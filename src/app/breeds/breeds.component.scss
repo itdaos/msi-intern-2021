@@ -1,0 +1,47 @@
+.inner-container {
+  width: 100%;
+  padding: 30px;
+  height: 100%;
+}
+
+.prime {
+  min-height: calc(100vh - 135px);
+  width: 100%;
+  background-color: var(--color-base);
+  border-radius: 20px;
+  padding: 20px;
+
+  .icon.button {
+    background-color: var(--color-secondary);
+    color: var(--color-main);
+    border: 0;
+  }
+
+  .icon.button svg path {
+    fill: var(--color-main);
+  }
+
+  .icon.button:hover {
+    background-color: var(--color-main);
+    color: var(--color-base);
+    border: 0;
+  }
+
+  .icon.button:hover svg path, .icon.button.activated svg path {
+    fill: var(--color-base);
+  }
+
+  .icon.button.activated {
+    background-color: var(--color-main);
+    color: var(--color-base);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  .path .icon.button:not(:first-child) {
+    padding: 5px 30px;
+  }
+}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './app-wrapper/app.component';
 import { BreedsComponent } from './breeds/breeds.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { LandingComponent } from './landing/landing.component';

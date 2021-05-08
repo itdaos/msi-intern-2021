@@ -4,12 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppRootComponent } from './app-root.component';
 import { LandingComponent } from './landing/landing.component';
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './app-wrapper/app.component';
 import { VotingComponent } from './voting/voting.component';
 import { BreedsComponent } from './breeds/breeds.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { httpInterceptorsProviders } from './httpInterceptorsProviders';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-  
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [httpInterceptorsProviders],
   bootstrap: [AppRootComponent]
