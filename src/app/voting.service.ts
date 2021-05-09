@@ -8,6 +8,15 @@ export interface DogResponse {
   url: string
   width: number
   height: number
+  image_id: string;
+  value?: number;
+  vote_id?: number;
+}
+
+export interface Image {
+  id: string;
+  url: string;
+  vote_id?: number;
 }
 
 interface Breed {
@@ -43,8 +52,24 @@ export class VotingService {
     return this.http.post("https://api.thedogapi.com/v1/votes", {image_id: id, value: vote});
   }
 
+  unvoteOnId(id) {
+    return this.http.delete(`https://api.thedogapi.com/v1/votes/${id}`)
+  }
+
   makeFavourite(id: string) {
     return this.http.post("https://api.thedogapi.com/v1/favourites", {image_id: id});
+  }
+
+  loadVotes() {
+    return this.http.get<DogResponse[]>("https://api.thedogapi.com/v1/votes");
+  }
+
+  loadFavourites() {
+    return this.http.get<DogResponse[]>("https://api.thedogapi.com/v1/favourites");
+  }
+
+  loadImageByID(id: string) {
+    return this.http.get<Image>(`https://api.thedogapi.com/v1/images/${id}`);
   }
 
 }

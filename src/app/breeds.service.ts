@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Breed } from './breeds/breeds.component';
-import { DogResponse } from './voting.service';
+import { DogResponse, Image} from './voting.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +17,13 @@ export class BreedsService {
 
   loadBreeds() {
     return this.http.get<Breed[]>("https://api.TheDogAPI.com/v1/breeds");
+  }
+
+  searchByName(name: string) {
+    return this.http.get<Breed[]>(`https://api.TheDogAPI.com/v1/breeds/search?q=${name}`);
+  }
+
+  loadImageByBreed(breed_id: string) {
+    return this.http.get<Image>(`https://api.TheDogAPI.com/v1/images/search?breed_id=${breed_id}`);
   }
 }

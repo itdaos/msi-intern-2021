@@ -12,6 +12,11 @@ import { httpInterceptorsProviders } from './httpInterceptorsProviders';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DndDirective } from './dnd.directive';
+import { BreedsInfoComponent } from './breeds-info/breeds-info.component';
+import { SearchBreedComponent } from './search-breed/search-breed.component';
+import { LikesComponent } from './likes/likes.component';
+import { DislikesComponent } from './dislikes/dislikes.component';
+import { FavoursComponent } from './favours/favours.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { DndDirective } from './dnd.directive';
     VotingComponent,
     BreedsComponent,
     GalleryComponent,
-    DndDirective
+    DndDirective,
+    BreedsInfoComponent,
+    SearchBreedComponent,
+    LikesComponent,
+    DislikesComponent,
+    FavoursComponent
   ],
   imports: [
     BrowserModule,

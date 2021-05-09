@@ -12,6 +12,22 @@ export interface Breed {
   wikipedia_url: string;
   origin: string;
   country_code: string;
+  bred_for: string;
+  breed_group: string;
+  image?: {
+    id: string;
+    height: number;
+    width: number;
+    url:string;
+  }
+  weight: {
+    metric: string;
+    imperial: string;
+  }
+  height: {
+    metric: string;
+    imperial: string;
+  }
 }
 
 @Component({
@@ -26,11 +42,12 @@ export class BreedsComponent implements OnInit {
   breed: FormControl = new FormControl(""); 
   sortBy: string = "Rand";
   favoured: string[] = [];
+  search: FormControl = new FormControl("");
 
   constructor(private breeds: BreedsService, private voting: VotingService) { }
 
   ngOnInit(): void {
-    this.breeds.loadDogs(this.limit.value, this.sortBy, this.breed.value).subscribe( (resp) => {this.fetchedDogs=resp} );
+    this.breeds.loadDogs(this.limit.value, this.sortBy, this.breed.value).subscribe( (resp) => {this.fetchedDogs=resp; console.log(resp)} );
     this.breeds.loadBreeds().subscribe( (resp) => {
       this.fetchedBreeds=resp;
     });

@@ -1,0 +1,61 @@
+[debug] [2021-05-09T18:10:49.849Z] ----------------------------------------------------------------------
+[debug] [2021-05-09T18:10:49.852Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2021-05-09T18:10:49.853Z] CLI Version:   9.10.2
+[debug] [2021-05-09T18:10:49.853Z] Platform:      linux
+[debug] [2021-05-09T18:10:49.853Z] Node Version:  v16.0.0
+[debug] [2021-05-09T18:10:49.853Z] Time:          Sun May 09 2021 21:10:49 GMT+0300 (Eastern European Summer Time)
+[debug] [2021-05-09T18:10:49.854Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-09T18:10:49.858Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-09T18:10:49.858Z] > authorizing via signed-in user (jjok730@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/itdaos/angular-projects/MSI - 2021
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-05-09T18:11:09.379Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-05-09T18:11:09.849Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-05-09T18:11:09.849Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project msi-internship-2021 (MSI-internship-2021) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] ✔  Wrote public/404.html 
+[debug] [2021-05-09T18:11:40.366Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-05-09T18:11:40.525Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-05-09T18:11:40.526Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.5.0","browserURL":"https://www.gstatic.com/firebasejs/8.5.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.5.0/firebase.tgz"},"live":{"version":"8.5","browserURL":"https://www.gstatic.com/firebasejs/live/8.5/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.5/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js","auth":"https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.5.0/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.5.0/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.5.0/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.5.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.5.0/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.memory.js"}}
+[info] ✔  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at /home/itdaos/angular-projects/MSI - 2021 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=486828559&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-05-09T18:12:17.457Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"92a2041e8f22b748d11e","redirect_uri":"http://localhost:9005","state":"486828559"}
+[debug] [2021-05-09T18:12:17.809Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Sun, 09 May 2021 18:12:17 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"0909de96d7507dcbeddeee58a9b8bc0e\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-3f088aa2.js gist.github.com/socket-worker-3f088aa2.js","x-github-request-id":"FA3E:5CEF:55DCC59:581689D:60982601"}
+[debug] [2021-05-09T18:12:17.897Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-05-09T18:12:18.238Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-05-09T18:12:18.239Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"itdaos","id":28890323,"node_id":"MDQ6VXNlcjI4ODkwMzIz","avatar_url":"https://avatars.githubusercontent.com/u/28890323?v=4","gravatar_id":"","url":"https://api.github.com/users/itdaos","html_url":"https://github.com/itdaos","followers_url":"https://api.github.com/users/itdaos/followers","following_url":"https://api.github.com/users/itdaos/following{/other_user}","gists_url":"https://api.github.com/users/itdaos/gists{/gist_id}","starred_url":"https://api.github.com/users/itdaos/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/itdaos/subscriptions","organizations_url":"https://api.github.com/users/itdaos/orgs","repos_url":"https://api.github.com/users/itdaos/repos","events_url":"https://api.github.com/users/itdaos/events{/privacy}","received_events_url":"https://api.github.com/users/itdaos/received_events","type":"User","site_admin":false,"name":"itdaos","company":null,"blog":"","location":"Ukraine","email":"jjok730@gmail.com","hireable":null,"bio":"Front-end, DevOps, DS\\ML\r\nSemper Tiro\r\n","twitter_username":null,"public_repos":3,"public_gists":0,"followers":4,"following":7,"created_at":"2017-05-23T08:23:44Z","updated_at":"2021-05-09T18:12:15Z","private_gists":0,"total_private_repos":4,"owned_private_repos":4,"disk_usage":7396,"collaborators":4,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as itdaos 
+[info] 

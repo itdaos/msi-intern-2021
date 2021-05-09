@@ -1,0 +1,238 @@
+.inner-container {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    height: 100%;
+
+    .modal {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 500;
+        width: calc(50vw - 60px);
+        height: calc(100vh - 60px);
+        margin: 30px;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        font: 20px 'Jost';
+        font-weight: 400;
+        color: #8C8C8C;
+
+        .icon.button {
+            width: 40px;
+            height: 40px;
+            align-self: flex-end;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            color: #1D1D1D;
+        }
+
+        b {
+            color: #1d1d1d;
+            font-weight: 500;
+        }
+
+        .upload {
+            width: 100%;
+            height: 40vh;
+            background: var(--color-base) url(/assets/img/image-bgrd.svg) center center no-repeat;
+            border-radius: 20px;
+            border: 2px dashed var(--color-secondary);
+            text-align: center;
+            line-height: calc(40vh - 40px);
+            margin: 40px 0 20px 0;
+            position: relative;
+            padding: 20px 40px;
+
+            &.rejected {
+                background-color: var(--color-secondary);
+                border: 2px dashed var(--color-main);
+            }
+            
+            .image-preview {
+                position: absolute;
+                z-index: 510;
+                max-width: calc(100% - 80px);
+                max-height: calc(100% - 40px);
+                height: 100%;
+                width: auto;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+
+            input {
+                opacity: 0;
+                position: absolute;
+                z-index: 505;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                cursor: pointer;
+            }
+
+        }
+        .text.button {
+            padding: 12px 30px;
+            background-color: var(--color-main);
+            text-transform: uppercase;
+            color: var(--color-base);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin: 20px 0;
+        }
+
+        .text.button:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-main);
+        }
+
+        .message {
+            padding: 20px;
+            background-color: var(--color-base);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            p {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    .modal-overlay {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 400;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .uploader {
+        background-color: var(--color-background-main);
+        border-radius: 20px;
+    }
+  }
+  
+  .prime {
+    min-height: calc(100vh - 135px);
+    width: 100%;
+    background-color: var(--color-base);
+    border-radius: 20px;
+    padding: 20px;
+    
+    .controls-view {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 20px;
+        padding: 10px 20px 20px 20px;
+        border-radius: 20px;
+        background-color: var(--color-background-main);
+        margin-bottom: 20px;
+
+        .selector {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            label {
+                    margin-left: 10px;
+                font: 'Jost' 10px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: #8c8c8c;
+            }
+
+            .select-holder {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .custom-select {
+                width: 100%;
+                select {
+                    color: #1D1D1D;
+                    background-color: var(--color-base);
+                }
+            }
+        }
+    }
+    .upload {
+        padding: 12px 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        letter-spacing: 2px;
+        font-weight: 500;
+        line-height: 16px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .icon.button {
+      background-color: var(--color-secondary);
+      color: var(--color-main);
+      border: 0;
+    }
+  
+    .icon.button svg path {
+      fill: var(--color-main);
+    }
+  
+    .icon.button:hover {
+      background-color: var(--color-main);
+      color: var(--color-base);
+      border: 0;
+    }
+  
+    .icon.button:hover svg path, .icon.button.activated svg path {
+      fill: var(--color-base);
+    }
+  
+    .icon.button.activated {
+      background-color: var(--color-main);
+      color: var(--color-base);
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 10px;
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  
+    .path .icon.button:not(:first-child) {
+      padding: 5px 30px;
+    }
+  }
+  

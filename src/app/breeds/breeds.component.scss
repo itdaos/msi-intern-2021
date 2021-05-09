@@ -44,4 +44,20 @@
   .path .icon.button:not(:first-child) {
     padding: 5px 30px;
   }
+
+  .bottom-overlay {
+    display: block;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -10px);
+    top:unset;
+    right: unset;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    width: calc(100% - 20px);
+    border-radius: 20px;
+    text-decoration: none;
+  }
 }

@@ -24,6 +24,7 @@ export class GalleryComponent implements OnInit {
   imageURL: string;
   response: string;
   modal: boolean = false;
+  search: FormControl = new FormControl("");
 
   constructor(private breeds: BreedsService, private voting: VotingService, private images: ImagesService) { }
 

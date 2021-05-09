@@ -27,7 +27,12 @@ svg {
 app-landing,
 app-voting,
 app-breeds,
-app-gallery {
+app-gallery,
+app-breeds-info,
+app-search-breed,
+app-likes,
+app-dislikes,
+app-favours {
   width: 100%;
   position: relative;
 }
@@ -491,7 +496,6 @@ a.button.activated svg path {
 .grid-item {
   grid-column: span 1;
   grid-row: span 1;
-  background-color: #e5e5e5;
 
   &:nth-of-type(10n + 1),
   &:nth-of-type(10n + 8) {
@@ -504,6 +508,4 @@ a.button.activated svg path {
     grid-column: span 2;
   }
 
-  img {
-  }
 }

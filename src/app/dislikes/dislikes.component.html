@@ -91,67 +91,20 @@
             />
           </svg>
         </a>
-        <a href="" class="icon button activated">Breeds</a>
-      </div>
-      <div class="controls">
-        <div class="selector" id="breeds">
-          <div class="custom-select">
-            <span class="myarrow"></span>
-            <select name="breeds" [formControl]="breed" (change)="onChange()">
-              <option value="" selected>All breads</option>
-              <option *ngFor="let breed of fetchedBreeds" value="{{breed.id}}">{{breed.name}}</option>
-            </select>
-          </div>
-        </div>
-        <div class="selector" id="limit">
-          <div class="custom-select">
-            <span class="myarrow"></span>
-            <select name="limit" [formControl]="limit" (change)="onChange()">
-              <option value="5" >Limit: 5</option>
-              <option value="10" selected>Limit: 10</option>
-              <option value="15">Limit: 15</option>
-              <option value="20">Limit: 20</option>
-            </select>
-          </div>
-        </div>
-        <a [ngClass]="sortBy =='ASC' ? 'icon button activated' : 'icon button'" (click)="clickUp()" >
-          <svg
-            width="19"
-            height="20"
-            viewBox="0 0 19 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M4 0.195262C4.26035 -0.0650874 4.68246 -0.0650874 4.94281 0.195262L8.94281 4.19526L8 5.13807L5.13807 2.27614V20H3.80474V2.27614L0.942809 5.13807L0 4.19526L4 0.195262ZM15.1381 1.33333C14.0335 1.33333 13.1381 2.22876 13.1381 3.33333V5.33333H17.1381V3.33333C17.1381 2.22876 16.2426 1.33333 15.1381 1.33333ZM17.1381 6.66667V9.33333H18.4714V3.33333C18.4714 1.49238 16.979 9.93411e-09 15.1381 9.93411e-09C13.2971 9.93411e-09 11.8047 1.49238 11.8047 3.33333V9.33333H13.1381V6.66667H17.1381ZM11.8047 10.6667H15.8047C17.2775 10.6667 18.4714 11.8606 18.4714 13.3333C18.4714 14.1298 18.1222 14.8447 17.5686 15.3333C18.1222 15.822 18.4714 16.5369 18.4714 17.3333C18.4714 18.8061 17.2775 20 15.8047 20H11.8047V10.6667ZM15.8047 14.6667C16.5411 14.6667 17.1381 14.0697 17.1381 13.3333C17.1381 12.597 16.5411 12 15.8047 12H13.1381V14.6667H15.8047ZM13.1381 16H15.8047C16.5411 16 17.1381 16.597 17.1381 17.3333C17.1381 18.0697 16.5411 18.6667 15.8047 18.6667H13.1381V16Z"
-              fill="#8C8C8C"
-            />
-          </svg>
-        </a>
-        <a [ngClass]="sortBy =='DESC' ? 'icon button activated' : 'icon button'" (click)="clickDown()">
-          <svg
-            width="19"
-            height="20"
-            viewBox="0 0 19 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M3.80474 17.7239V0H5.13807V17.7239L8 14.8619L8.94281 15.8047L4.94281 19.8047C4.81778 19.9298 4.64822 20 4.4714 20C4.29459 20 4.12502 19.9298 4 19.8047L0 15.8047L0.942809 14.8619L3.80474 17.7239ZM15.1381 1.33333C14.0335 1.33333 13.1381 2.22876 13.1381 3.33333V5.33333H17.1381V3.33333C17.1381 2.22876 16.2426 1.33333 15.1381 1.33333ZM17.1381 6.66667V9.33333H18.4714V3.33333C18.4714 1.49238 16.979 0 15.1381 0C13.2971 0 11.8047 1.49238 11.8047 3.33333V9.33333H13.1381V6.66667H17.1381ZM11.8047 10.6667H15.8047C17.2775 10.6667 18.4714 11.8606 18.4714 13.3333C18.4714 14.1298 18.1222 14.8447 17.5686 15.3333C18.1222 15.822 18.4714 16.5369 18.4714 17.3333C18.4714 18.8061 17.2775 20 15.8047 20H11.8047V10.6667ZM15.8047 14.6667C16.5411 14.6667 17.1381 14.0697 17.1381 13.3333C17.1381 12.597 16.5411 12 15.8047 12H13.1381V14.6667H15.8047ZM13.1381 16H15.8047C16.5411 16 17.1381 16.597 17.1381 17.3333C17.1381 18.0697 16.5411 18.6667 15.8047 18.6667H13.1381V16Z"
-              fill="#8C8C8C"
-            />
-          </svg>
-        </a>
+        <a class="icon button activated">Dislikes</a>
       </div>
     </div>
     <div class="grid-container-view">
       <div class="img-holder grid-item" *ngFor="let doggo of fetchedDogs">
         <img [src]="doggo.url" alt="doggy" />
-        <a [ngClass]="doggo.breeds[0] ? 'bottom-overlay overlay icon button' : 'bottom-overlay overlay icon button noHover'" [routerLink]="doggo.breeds[0] ? ['/breeds', doggo.breeds[0].id]: '/breeds'">{{doggo.breeds[0] ? doggo.breeds[0].name : "Unknown"}}</a>
+        <a
+          class=' overlay bottom-overlay button icon'
+          (click)="unVote(doggo.id)"
+        >
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.05691 8.99997L0.52832 1.47137L1.47113 0.528564L8.99972 8.05716L16.5283 0.528564L17.4711 1.47137L9.94253 8.99997L17.4711 16.5286L16.5283 17.4714L8.99972 9.94278L1.47113 17.4714L0.52832 16.5286L8.05691 8.99997Z" fill="#FF868E"/>
+          </svg>
+        </a>
       </div>
     </div>
   </div>

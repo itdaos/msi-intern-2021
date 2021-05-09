@@ -1,0 +1,140 @@
+.inner-container {
+    width: 100%;
+    padding: 30px;
+    height: 100%;
+  }
+  
+  .prime {
+    min-height: calc(100vh - 135px);
+    width: 100%;
+    background-color: var(--color-base);
+    border-radius: 20px;
+    padding: 20px;
+
+    .breed-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 50px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .breed-info {
+        border: 1px solid var(--color-secondary);
+        position: relative;
+        display: flex;
+        padding: 75px 40px 40px 40px;
+        border-radius: 20px;
+
+        .left, .right {
+            width: 50%;
+            height: 100%;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #8c8c8c;
+
+            b {
+                font-weight: 500;
+                color: #1D1D1D;
+            }
+            
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        h1 {
+            display: block;
+            padding: 5px 40px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            background: var(--color-base);
+            border-radius: 20px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 52px;
+            transform: translate(-50%, -50%);
+            color: #1d1d1d;
+            white-space: nowrap;
+        }
+
+        h2 {
+            position: absolute;
+            top: 36px;
+            left: 50%;
+            background: var(--color-base);
+            border-radius: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 26px;
+            transform: translate(-50%, -50%);
+            color: #8C8C8C;
+            white-space: nowrap;
+        }
+
+    }
+  
+    .icon.button {
+      background-color: var(--color-secondary);
+      color: var(--color-main);
+      border: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  
+    .icon.button svg path {
+      fill: var(--color-main);
+    }
+  
+    .icon.button:hover {
+      background-color: var(--color-main);
+      color: var(--color-base);
+      border: 0;
+    }
+  
+    .icon.button:hover svg path, .icon.button.activated svg path {
+      fill: var(--color-base);
+    }
+  
+    .icon.button.activated {
+      background-color: var(--color-main);
+      color: var(--color-base);
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 10px;
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  
+    .path .icon.button:not(:first-child) {
+      padding: 5px 30px;
+    }
+  
+    .bottom-overlay {
+      display: block;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, -10px);
+      top:unset;
+      right: unset;
+      cursor: pointer;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+      width: calc(100% - 20px);
+      border-radius: 20px;
+    }
+  }
+  

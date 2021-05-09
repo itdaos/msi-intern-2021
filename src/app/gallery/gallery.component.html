@@ -6,8 +6,9 @@
         name="query"
         id="query"
         placeholder="Search for breeds by name"
+        [formControl]="search"
       />
-      <button type="submit" class="submit">
+      <button type="submit" class="submit" [routerLink]="['/search', search.value]">
         <svg
           width="20"
           height="20"
@@ -23,7 +24,7 @@
       </button>
     </div>
     <div class="reaction-holder">
-      <a href="#1" id="upvote" class="reaction button">
+      <a routerLink="/likes" routerLinkActive="activated" id="upvote" class="reaction button">
         <svg
           width="30"
           height="30"
@@ -39,7 +40,7 @@
           />
         </svg>
       </a>
-      <a href="#2" id="favour" class="reaction button">
+      <a routerLink="/favours" routerLinkActive="activated" id="favour" class="reaction button">
         <svg
           width="30"
           height="26"
@@ -55,7 +56,7 @@
           />
         </svg>
       </a>
-      <a href="#3" id="downvote" class="reaction button">
+      <a routerLink="/dislikes" routerLinkActive="activated" id="downvote" class="reaction button">
         <svg
           width="30"
           height="30"

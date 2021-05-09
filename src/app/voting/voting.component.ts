@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { VotingService, DogResponse } from '../voting.service';
 
 interface Log {
@@ -17,6 +18,7 @@ export class VotingComponent implements OnInit {
   messageLog: Log[] = [];
   favoured: boolean;
   isProcessing: boolean;
+  search: FormControl = new FormControl("");
 
   constructor(private voting: VotingService) {
   }
