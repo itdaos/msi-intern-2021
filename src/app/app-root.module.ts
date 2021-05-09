@@ -11,6 +11,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { httpInterceptorsProviders } from './httpInterceptorsProviders';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DndDirective } from './dnd.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRootComponent,
     VotingComponent,
     BreedsComponent,
-    GalleryComponent
+    GalleryComponent,
+    DndDirective
   ],
   imports: [
     BrowserModule,

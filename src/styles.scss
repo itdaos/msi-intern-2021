@@ -59,6 +59,8 @@ app-gallery {
     border-radius: 10px;
     text-transform: uppercase;
     transition: var(--transition-param);
+    letter-spacing: 2px;
+    font-weight: 500;
   }
 
   &:hover a {
@@ -75,6 +77,7 @@ app-gallery {
 a.button {
   color: var(--color-main);
   background-color: var(--color-base);
+  letter-spacing: 2px;
 }
 
 a.button:hover {
@@ -279,6 +282,7 @@ a.button.activated svg path {
   line-height: 1.5em;
   height: 4rem;
   min-width: max-content;
+  max-width: 100%;
   width: 100%;
   appearance: none;
   color: #1d1d1d;
@@ -452,6 +456,7 @@ a.button.activated svg path {
   text-decoration: none;
   font-size: 1.2rem;
   padding: 12px 30px;
+  letter-spacing: 2px;
   display: flex;
   flex-direction: row;
   width: max-content;
